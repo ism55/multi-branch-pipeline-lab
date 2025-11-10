@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: multi-branch-pipeline-lab 
+  name: multi-branch-pipeline-lab
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: multi-branch-pipeline-lab 
+      app: multi-branch-pipeline-lab
   template:
     metadata:
       labels:
-        app: multi-branch-pipeline-lab 
+        app: multi-branch-pipeline-lab
     spec:
       containers:
-      - name: multi-branch-pipeline-lab 
-        image: ghcr.io/ism55/multi-branch-pipeline-lab :dev
+      - name: multi-branch-pipeline-lab
+        image: ghcr.io/ism55/multi-branch-pipeline-lab:dev
         ports:
         - containerPort: 8080
         env:
